@@ -58,7 +58,7 @@ export default function App() {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-8 text-center">
-                    <img className="img-fluid m-3" src="https://picsum.photos/id/870/600/"></img>
+                    <img className="img-fluid m-3" src="https://picsum.photos/id/870/600/"></img><br />
                     <MySlider
                     min={SelectedOption.range.min}
                     max={SelectedOption.range.max}
