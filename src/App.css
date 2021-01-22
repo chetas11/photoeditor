@@ -6,6 +6,14 @@
     
 }
 
+body{
+    background-color: lightgray;
+}
+
+.sidebar{
+    background-color: darkgray;
+}
+
 .active{
     background-color: tomato;
     border: 1px solid black;

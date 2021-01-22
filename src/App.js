@@ -28,13 +28,23 @@ const DEFAULT_OPTIONS = [
     },
     {
         name:'Hue',
-        property:'hue',
+        property:'hue-rotate',
         value: 0,
         range: {
             min:0,
             max:360
         },
         unit:'deg'
+    },
+    {
+        name:'Saturation',
+        property:'saturate',
+        value: 100,
+        range: {
+            min:0,
+            max:200
+        },
+        unit:'%'
     },
     
 
@@ -54,11 +64,19 @@ export default function App() {
         })
     }
 
+    function getImageStyle(){
+        const filters = options.map(option => {
+            return `${option.property}(${option.value}${option.unit})`
+        })
+
+        return{ filter: filters.join(' ')}
+    }
+
     return (
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-8 text-center">
-                    <img className="img-fluid m-3" src="https://picsum.photos/id/870/600/"></img><br />
+                    <img style={getImageStyle()} className="img-fluid m-3" src="https://picsum.photos/id/870/600/"></img><br />
                     <MySlider
                     min={SelectedOption.range.min}
                     max={SelectedOption.range.max}
