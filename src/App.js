@@ -75,7 +75,7 @@ export default function App() {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-lg-8 text-center">
+                <div className="col-lg-8 col-md-8 col-sm-6 text-center">
                     <img style={getImageStyle()} className="img-fluid m-3" src="https://picsum.photos/id/870/600/"></img><br />
                     <MySlider
                     min={SelectedOption.range.min}
@@ -85,7 +85,7 @@ export default function App() {
                     />
                     <p>{SelectedOption.value}</p>
                 </div>
-                <div className="col-lg-4 mt-3 text-center">
+                <div className="col-lg-4 col-md-4 col-sm-6 mt-3 text-center">
                     {options.map((option, index)=> {
                     return(
                         <Sidebar key={index} 
