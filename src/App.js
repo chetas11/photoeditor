@@ -83,6 +83,7 @@ export default function App() {
                     value={SelectedOption.value}
                     handleChange={handleSliderChange}
                     />
+                    <p>{SelectedOption.value}</p>
                 </div>
                 <div className="col-lg-4 mt-3 text-center">
                     {options.map((option, index)=> {
